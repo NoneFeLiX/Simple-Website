@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+  <h2>Especially Dangerous</h2>
+    <table border="1">
+      <tr bgcolor="#9acd32">
+    <th>Role</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <xsl:for-each select="family/person">
+          <tr>
+        <td><xsl:value-of select="role"/>Hacker</td>
+        <td><xsl:value-of select="name"/>Fenix</td>
+        <td><xsl:value-of select="age"/>14</td>
+          </tr>
+
+          <tr>
+            <td><xsl:value-of select="role"/>Programmer</td>
+            <td><xsl:value-of select="name"/>Alimaticum</td>
+            <td><xsl:value-of select="age"/>14</td>
+          </tr>
+
+          <tr>
+            <td><xsl:value-of select="role"/>Teacher</td>
+            <td><xsl:value-of select="name"/>John Marler</td>
+            <td><xsl:value-of select="age"/>24</td>
+            </tr>
+    
+            <tr>
+             <td><xsl:value-of select="role"/>Police</td>
+             <td><xsl:value-of select="name"/>Ali</td>
+             <td><xsl:value-of select="age"/>18</td>
+            </tr>
+      </xsl:for-each>
+    </table>
+  </body>
+  </html>
+</xsl:template>
+</xsl:stylesheet>
+</body>
+</html>
